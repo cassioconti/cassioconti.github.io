@@ -1,0 +1,26 @@
+<h1 id="rendering-markdown-on-a-html-page">Rendering markdown on a HTML page</h1>
+<ol>
+<li>Convert markdown to HTML:</li>
+</ol>
+<pre><code class="language-js">var marked = require(&#39;marked&#39;); // npm install -D marked
+var fs = require(&#39;fs&#39;);
+var readMe = fs.readFileSync(&#39;README.md&#39;, &#39;utf-8&#39;);
+var markdownReadMe = marked(readMe);
+fs.writeFileSync(&#39;./README.html&#39;, markdownReadMe);
+</code></pre>
+<ol start="2">
+<li>Load the converted file in a div element:</li>
+</ol>
+<pre><code class="language-html">&lt;html&gt;
+    &lt;head&gt;
+        &lt;script&gt;
+            $(function () {
+                $(&quot;#markdown&quot;).load(&quot;README.html&quot;);
+            });
+        &lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div id=&quot;markdown&quot;&gt;&lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>

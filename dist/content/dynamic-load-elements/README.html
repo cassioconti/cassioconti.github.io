@@ -1,0 +1,23 @@
+<h1 id="dynamic-replace-of-div-elements">Dynamic replace of div elements</h1>
+<ol>
+<li>Find all div elements that contains a <code>markdown</code> attribute and use its values to load an HTML.</li>
+</ol>
+<pre><code class="language-html">&lt;html&gt;
+    &lt;head&gt;
+        &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+        &lt;script&gt;
+            $(function () {
+                $(&quot;div[markdown]&quot;).each((index, elem) =&gt; {
+                    const mdFile = elem.attributes[&quot;markdown&quot;].value + &quot;.html&quot;
+                    $.get(mdFile, response =&gt; {
+                        elem.innerHTML = response
+                    });
+                })
+            });
+        &lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div markdown=&quot;README&quot;&gt;&lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>

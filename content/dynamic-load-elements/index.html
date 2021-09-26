@@ -1,0 +1,18 @@
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $("div[markdown]").each((index, elem) => {
+                const mdFile = elem.attributes["markdown"].value + ".html"
+                $.get(mdFile, response => {
+                    elem.innerHTML = response
+                });
+            })
+        });
+    </script>
+</head>
+<body>
+    <div markdown="dist/content/latex/README"></div>
+</body>
+</html>

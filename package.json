@@ -1,0 +1,18 @@
+{
+  "name": "latex",
+  "version": "1.0.0",
+  "description": "## Prerequisite",
+  "main": "convertMdHtml.js",
+  "scripts": {
+    "build": "node convertMdHtml.js",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "marked": "^3.0.4"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

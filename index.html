@@ -1,1 +1,39 @@
-Under construction.
+<!DOCTYPE html lang="english">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="180x180" href="dist/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="dist/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="dist/favicon-16x16.png">
+    <link rel="manifest" href="dist/site.webmanifest">
+    <title>Testing markdown in HTML</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $("div[markdown]").each((index, elem) => {
+                const mdFile = elem.attributes["markdown"].value + ".html"
+                $.get(mdFile, response => {
+                    elem.innerHTML = response
+                });
+            })
+        });
+    </script>
+    <style>
+        div {
+            border: solid;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#latex">¶</a>
+    <div markdown="dist/content/latex/README" id="latex"></div>
+    <a href="#md-pdf">¶</a>
+    <div markdown="dist/content/md-pdf/README" id="md-pdf"></div>
+    <a href="#md-html">¶</a>
+    <div markdown="dist/content/md-html/README" id="md-html"></div>
+    <a href="#dynamic-load-elements">¶</a>
+    <div markdown="dist/content/dynamic-load-elements/README" id="dynamic-load-elements"></div>
+</body>
+
+</html>
