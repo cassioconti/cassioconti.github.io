@@ -92,8 +92,7 @@ sudo apt install texlive-latex-extra
 
 ```bib
 @article{spoon01,
-  author  = {{Spoon}, H.~W.~W. and {Keane}, J.~V. and {Tielens}, A.~G.~G.~M. and
-              {Lutz}, D. and {Moorwood}, A.~F.~M.},
+  author  = {{Spoon}, H.~W.~W. and {Keane}, J.~V. and {Tielens}, A.~G.~G.~M. and {Lutz}, D. and {Moorwood}, A.~F.~M.},
   title   = {{The obscured mid-infrared continuum of NGC 4418: A dust- and ice-enshrouded AGN}},
   journal = {aap},
   year    = 2001,
