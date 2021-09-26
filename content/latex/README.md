@@ -92,8 +92,8 @@ sudo apt install texlive-latex-extra
 
 ```bib
 @article{spoon01,
-  author  = {{Spoon}, H.~W.~W. and {Keane}, J.~V. and {Tielens}, A.~G.~G.~M. and {Lutz}, D. and {Moorwood}, A.~F.~M.},
-  title   = {{The obscured mid-infrared continuum of NGC 4418: A dust- and ice-enshrouded AGN}},
+  author  = { {Spoon}, H.~W.~W. and {Keane}, J.~V. and {Tielens}, A.~G.~G.~M. and {Lutz}, D. and {Moorwood}, A.~F.~M.},
+  title   = { {The obscured mid-infrared continuum of NGC 4418: A dust- and ice-enshrouded AGN} },
   journal = {aap},
   year    = 2001,
   month   = jan,
@@ -102,8 +102,8 @@ sudo apt install texlive-latex-extra
 }
 
 @inproceedings{Bridger94,
-  author    = {{Bridger}, A. and {Wright}, G. S. and {Geballe}, T. R.},
-  title     = {{Dust Absorption in NGC1068}},
+  author    = { {Bridger}, A. and {Wright}, G. S. and {Geballe}, T. R.},
+  title     = { {Dust Absorption in NGC1068} },
   booktitle = {ASSL Vol. 190: Astronomy With Arrays, The Next Generation},
   year      = 1994,
   pages     = {537}
